@@ -1,7 +1,6 @@
 <script setup>
 import MediumHeader from '@/components/templates/medium/MediumHeader.vue'
 import MediumAside from '@/components/templates/medium/MediumAside.vue'
-import MediumFooter from '@/components/templates/medium/MediumFooter.vue'
 </script>
 
 <template>
@@ -15,9 +14,6 @@ import MediumFooter from '@/components/templates/medium/MediumFooter.vue'
     <main>
       <router-view />
     </main>
-    <footer>
-      <MediumFooter />
-    </footer>
   </div>
 </template>
 <style scoped>
@@ -27,8 +23,7 @@ import MediumFooter from '@/components/templates/medium/MediumFooter.vue'
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
     'aside header'
-    'aside main'
-    'aside footer';
+    'aside main';
   min-height: 100vh;
 }
 
@@ -55,15 +50,6 @@ main {
   min-height: 80%;
   padding: 2rem;
   grid-area: main;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3rem;
-  background-color: #eeeeee;
-  grid-area: footer;
 }
 </style>
 <style scoped>
@@ -73,8 +59,7 @@ footer {
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
     'aside header'
-    'aside main'
-    'aside footer';
+    'aside main';
   min-height: 100vh;
 }
 
@@ -101,14 +86,5 @@ main {
   min-height: 80%;
   padding: 2rem;
   grid-area: main;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3rem;
-  background-color: #eeeeee;
-  grid-area: footer;
 }
 </style>
