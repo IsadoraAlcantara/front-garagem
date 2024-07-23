@@ -1,6 +1,5 @@
 <script setup>
 import MediumHeader from '@/components/templates/medium/MediumHeader.vue'
-import MediumAside from '@/components/templates/medium/MediumAside.vue'
 </script>
 
 <template>
@@ -8,9 +7,6 @@ import MediumAside from '@/components/templates/medium/MediumAside.vue'
     <header>
       <MediumHeader />
     </header>
-    <aside>
-      <MediumAside />
-    </aside>
     <main>
       <router-view />
     </main>
@@ -22,8 +18,7 @@ import MediumAside from '@/components/templates/medium/MediumAside.vue'
   grid-template-columns: 1fr 6fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
-    'aside header'
-    'aside main';
+    'main';
   min-height: 100vh;
 }
 
@@ -33,17 +28,6 @@ header {
   justify-content: flex-end;
   padding: 1.5rem;
   grid-area: header;
-}
-
-aside {
-  border-right: #eeeeee 1px solid;
-  box-shadow: 0 0 10px 0 #eeeeee;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  grid-area: aside;
 }
 
 main {
@@ -58,28 +42,16 @@ main {
   grid-template-columns: 1fr 6fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
-    'aside header'
-    'aside main';
+    'header'
+    'main';
   min-height: 100vh;
 }
 
 header {
   display: flex;
   widows: 100vw;
-  justify-content: flex-end;
-  padding: 1.5rem;
+  justify-content: flex-end;LargeMain
   grid-area: header;
-}
-
-aside {
-  border-right: #eeeeee 1px solid;
-  box-shadow: 0 0 10px 0 #eeeeee;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  grid-area: aside;
 }
 
 main {

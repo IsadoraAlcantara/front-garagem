@@ -1,16 +1,14 @@
 <script setup>
 import LargeHeader from '@/components/templates/large/LargeHeader.vue'
-import LargeAside from '@/components/templates/large/LargeAside.vue'
+import LargeMain from '../components/templates/large/LargeMain.vue'
 </script>
 <template>
   <div id="layout-large">
     <header>
       <LargeHeader />
     </header>
-    <aside>
-      <LargeAside />
-    </aside>
     <main>
+      <LargeMain />
       <router-view />
     </main>
   </div>
@@ -18,11 +16,10 @@ import LargeAside from '@/components/templates/large/LargeAside.vue'
 <style scoped>
 #layout-large {
   display: grid;
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr;
   grid-template-areas:
-    'aside header'
-    'aside main';
+    'header'
+    'main';
   min-height: 100vh;
 }
 
@@ -32,17 +29,6 @@ header {
   justify-content: flex-end;
   padding: 1.5rem;
   grid-area: header;
-}
-
-aside {
-  border-right: #eeeeee 1px solid;
-  box-shadow: 0 0 10px 0 #eeeeee;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  grid-area: aside;
 }
 
 main {
