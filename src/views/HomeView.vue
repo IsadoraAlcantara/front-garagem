@@ -1,30 +1,30 @@
 <script setup>
-import { onMounted } from 'vue';
-import { PassageUser } from '@passageidentity/passage-elements/passage-user';
-import { useAuthStore } from '@/stores/auth';
+import { onMounted } from 'vue'
+import { PassageUser } from '@passageidentity/passage-elements/passage-user'
+import { useAuthStore } from '@/stores/auth'
 
-const authStore = useAuthStore();
+const authStore = useAuthStore()
 
 const getUserInfo = async () => {
   try {
-    const authToken = localStorage.getItem('psg_auth_token');
-    const passageUser = new PassageUser(authToken);
-    const user = await passageUser.userInfo(authToken);
+    const authToken = localStorage.getItem('psg_auth_token')
+    const passageUser = new PassageUser(authToken)
+    const user = await passageUser.userInfo(authToken)
     if (user) {
-      await authStore.setToken(authToken);
+      await authStore.setToken(authToken)
     } else {
-      authStore.unsetToken();
+      authStore.unsetToken()
     }
   } catch (error) {
-    authStore.unsetToken();
+    authStore.unsetToken()
   }
-};
+}
 
 onMounted(() => {
-  getUserInfo(); 
-});
+  getUserInfo()
+})
 </script>
 
 <template>
- 
+  <product-list />
 </template>
