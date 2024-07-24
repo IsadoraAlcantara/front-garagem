@@ -7,7 +7,9 @@ import AcessoriosApi from '@/api/acessorios'
 
 import Button from "../components/ButtonComponent.vue"
 // import BtSave from "../components/BtSaveComponent.vue"
-import Input from "../components/InputComponent.vue"
+import InputText from "../components/InputTextComponent.vue"
+import InputNumber from "../components/InputNumberComponent.vue"
+import LineComponent from '@/components/LineComponent.vue'
 
 const veiculosApi = new VeiculosApi()
 const coresApi = new CoresApi()
@@ -58,9 +60,10 @@ async function excluir(id) {
     <h1>Veículos</h1>
     <div class="container-select">
       <div class="form">
-        <Input />
-        <input type="text" v-model="veiculo.ano" placeholder="Ano" />
-        <input type="text" v-model="veiculo.preco" placeholder="Preço" />
+        <InputNumber placeholder="ano"/>
+        <InputNumber placeholder="preço"/>
+        <!-- <input type="text" v-model="veiculo.ano" placeholder="Ano" />
+        <input type="text" v-model="veiculo.preco" placeholder="Preço" /> -->
         <select v-model="veiculo.cor" name="cores" id="cores">
           <option :value="cor.id" v-for="cor in cores" :key="cor.id">
             {{ cor.nome }}
@@ -84,6 +87,7 @@ async function excluir(id) {
             ({{ veiculo.id }}) - {{ veiculo.ano }} - {{ veiculo.preco }} - {{ veiculo.cor }} -
             {{ veiculo.modelo }} - {{ veiculo.acessorio }}
           </span>
+          <button class="bt-delete" @excluir="excluir(veiculo.id)">X</button>
           <button class="bt-delete" @click="excluir(veiculo.id)">X</button>
         </li>
       </ul>
