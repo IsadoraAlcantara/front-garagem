@@ -1,9 +1,6 @@
 <script setup></script>	
 
 <template>	
-  <div class="icons">	
-    <i class="mdi mdi-magnify" />	
-  </div>	
 </template>	
 
 <style scoped>	

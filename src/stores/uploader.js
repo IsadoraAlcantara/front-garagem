@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 
-import UploaderService from '@/services/uploader'
+import UploaderService from '@/service/uploader'
 const uploaderService = new UploaderService()
 
 export const useUploaderStore = defineStore('uploader', () => {

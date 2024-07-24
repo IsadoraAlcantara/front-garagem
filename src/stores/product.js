@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
-import ProductService from '@/services/product'
+import ProductService from '@/service/product'
 const productService = new ProductService()
 
 export const useProductStore = defineStore('product', () => {

@@ -26,7 +26,7 @@ import LargeMain from '../components/templates/large/LargeMain.vue'
 header {
   display: flex;
   widows: 100vw;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 1.5rem;
   grid-area: header;
 }

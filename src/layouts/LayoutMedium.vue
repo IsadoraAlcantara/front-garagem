@@ -50,7 +50,8 @@ main {
 header {
   display: flex;
   widows: 100vw;
-  justify-content: flex-end;LargeMain
+  justify-content: center;
+  padding: 1.5rem;
   grid-area: header;
 }
 
