@@ -4,6 +4,8 @@ import ModelosApi from '@/api/modelos'
 import MarcasApi from '@/api/marcas'
 import CategoriasApi from '@/api/categorias'
 
+import Button from '../components/ButtonComponent.vue'
+
 const modelosApi = new ModelosApi()
 const marcasApi = new MarcasApi()
 const categoriasApi = new CategoriasApi()
@@ -61,8 +63,7 @@ async function excluir(id) {
             {{ categoria.descricao }}
           </option>
         </select>
-        <button @click="salvar">Salvar</button>
-        <button @click="limpar">Limpar</button>
+        <Button @salvar="salvar" @limpar="limpar" />
       </div>
       <ul>
         <li v-for="modelo in modelos" :key="modelo.id">

@@ -1,16 +1,15 @@
 <script setup>
-import { defineEmits } from 'vue';
-const emit = defineEmits(['excluir'])
-
+defineProps(['veiculos'])
+const model = defineModel();
 </script>
 <template>
   <ul>
     <li v-for="veiculo in veiculos" :key="veiculo.id">
-      <span @click="editar(veiculo)">
+      <span @click="(veiculo)">
         ({{ veiculo.id }}) - {{ veiculo.ano }} - {{ veiculo.preco }} - {{ veiculo.cor }} -
         {{ veiculo.modelo }} - {{ veiculo.acessorio }}
       </span>
-      <button class="bt-delete" @click="$emit('excluir')(veiculo.id)">X</button>
+      <button class="bt-delete" @click="$emit('excluir', veiculo.id)">X</button>
     </li>
   </ul>
 </template>
@@ -28,4 +27,5 @@ li {
   display: flex;
   justify-content: space-between;
   padding: 0 2vw;
-}</style>
+}
+</style>

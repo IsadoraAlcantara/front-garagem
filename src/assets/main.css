@@ -92,6 +92,7 @@ button {
   margin: 0 1vw;
 }
 
+/* remover */
 ul {
   padding: 0;
 }
@@ -107,6 +108,7 @@ li {
   padding: 0 2vw;
 }
 
+/* remover */
 select {
   border-radius: 5px;
   width: 5vw;

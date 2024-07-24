@@ -1,9 +1,11 @@
 <script setup>
-import { defineEmits } from 'vue';
-const emit = defineEmits([])
+defineProps(["label"]);
+const model = defineModel();
 </script>
 <template>
-    <input type="text">
+  <span class="input-container">
+    <input type="text" :placeholder="label" v-model="model" />
+  </span>
 </template>
 <style scoped>
 input {

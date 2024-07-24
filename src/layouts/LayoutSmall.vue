@@ -1,5 +1,6 @@
 <script setup>
 import SmallHeader from '@/components/templates/small/SmallHeader.vue'
+import SmallFooter from '@/components/templates/small/SmallFooter.vue'
 </script>
 
 <template>
@@ -10,6 +11,9 @@ import SmallHeader from '@/components/templates/small/SmallHeader.vue'
     <main>
       <router-view />
     </main>
+    <footer>
+      <SmallFooter />
+    </footer>
   </div>
 </template>
 <style scoped>
@@ -45,5 +49,21 @@ main {
   padding-bottom: 4rem;
   padding-top: 1.5rem;
   position: relative;
+}
+
+footer {
+  border-top: #eeeeee 1px solid;
+  box-shadow: 0 0 10px 0 #eeeeee;
+  padding: 1.5rem;
+  margin-top: auto;
+  background-color: white;
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  z-index: 10;
 }
 </style>
