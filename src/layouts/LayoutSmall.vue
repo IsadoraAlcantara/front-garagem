@@ -26,10 +26,8 @@ import SmallFooter from '@/components/templates/small/SmallFooter.vue'
 header {
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem;
-  border-bottom: #eeeeee 2px solid;
+  padding: 1.7rem;
   background-color: white;
-
   z-index: 10;
   position: fixed;
   left: 0;
@@ -54,10 +52,9 @@ main {
 footer {
   border-top: #eeeeee 1px solid;
   box-shadow: 0 0 10px 0 #eeeeee;
-  padding: 1.5rem;
+  padding: 1rem;
   margin-top: auto;
   background-color: white;
-
   position: fixed;
   left: 0;
   bottom: 0;
