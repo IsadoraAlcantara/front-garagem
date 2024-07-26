@@ -103,7 +103,8 @@ async function excluir(id) {
 
 @media screen and (max-width: 768px) {
   .container-select {
-    min-height: 60vw;
+    min-height: 70vw;
+    min-width: 85vw;
   }
 
   ul {
@@ -111,14 +112,14 @@ async function excluir(id) {
   }
 
   select {
-    width: 10vw !important;
+    width: 14vw !important;
     height: 6vw !important;
     background-color: white;
   }
 
   .form {
     display: grid;
-    grid-template-columns: 15vw 15vw 10vw 10vw 10vw;
+    grid-template-columns: 20vw 20vw 14vw 14vw 14vw;
   }
 }
 </style>

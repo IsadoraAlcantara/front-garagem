@@ -19,6 +19,7 @@ input {
 @media screen and (max-width: 768px) {
   input {
     height: 6vw;
+    width: 20vw;
   }
 }
 </style>
