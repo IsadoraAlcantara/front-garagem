@@ -91,8 +91,7 @@ async function excluir(id) {
   }
 
   .form {
-    display: grid;
-    grid-template-columns: 20vw 14vw 14vw;
+    display: flex;
   }
 }
 </style>

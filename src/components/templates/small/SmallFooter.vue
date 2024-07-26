@@ -39,7 +39,7 @@ onBeforeRouteUpdate(() => {
     <RouterLink to="/">
       <i class="mdi mdi-home-outline mdi-36px" />
     </RouterLink>
-    <RouterLink to="/">
+    <RouterLink to="/login">
       <i class="mdi mdi-account-circle-outline mdi-36px" />
     </RouterLink>
     <RouterLink to="/veiculos">
@@ -57,8 +57,8 @@ onBeforeRouteUpdate(() => {
 </template>
 <style scoped>
 .plus-bt {
-  background-color: #292d73;
-  color: white;
+  background-color: #143259;
+  color: #e4eaf2;
   width: 8vw;
   height: 8vw;
   display: flex;
@@ -69,12 +69,12 @@ onBeforeRouteUpdate(() => {
 
 #footerMenu {
   position: fixed;
-  bottom: 15%;
+  bottom: 100%;
   right: 0;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  width: 20%;
+  width: 35%;
   border-top: #eeeeee 1px solid;
-  background-color: white;
+  background-color: #0c2240;
   display: block;
   padding: 1rem;
   border-radius: 8px;
@@ -84,7 +84,7 @@ onBeforeRouteUpdate(() => {
   display: flex;
   width: 100%;
   text-decoration: none;
-  color: #282828;
+  color: #e4eaf2;
   font-size: 1rem;
   transition: color 0.3s;
   gap: 2vw;
@@ -93,6 +93,7 @@ onBeforeRouteUpdate(() => {
 .icons {
   display: flex;
   width: 100%;
+  height: 8vw;
   align-items: center;
   justify-content: space-between;
 }
@@ -106,6 +107,7 @@ onBeforeRouteUpdate(() => {
   color: #282828;
   font-size: 1rem;
   transition: color 0.3s;
+  color: #e4eaf2;
 }
 
 .hamburger:hover {

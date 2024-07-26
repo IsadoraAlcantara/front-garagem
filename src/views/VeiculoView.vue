@@ -8,7 +8,7 @@ import AcessoriosApi from '@/api/acessorios'
 import Button from '../components/ButtonComponent.vue'
 import InputNumber from '../components/InputNumberComponent.vue'
 import LineVeiculos from '@/components/LineComponents/LineVeiculosComponent.vue'
-import Select from '../components/SelectComponent.vue'
+// import Select from '../components/SelectComponent.vue'
 
 const veiculosApi = new VeiculosApi()
 const coresApi = new CoresApi()
@@ -108,13 +108,12 @@ async function excluir(id) {
   }
 
   ul {
-    margin-top: 12vw;
+    margin-top: 14vw;
   }
 
   select {
     width: 14vw !important;
     height: 6vw !important;
-    background-color: white;
   }
 
   .form {

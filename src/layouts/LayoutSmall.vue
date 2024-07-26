@@ -54,13 +54,15 @@ footer {
   box-shadow: 0 0 10px 0 #eeeeee;
   padding: 1rem;
   margin-top: auto;
-  background-color: white;
+  background-color: #0c2240;
   position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  left: 50%;
+  translate: -50% 0;
+  bottom: 2%;
+  width: 80%;
   color: white;
   text-align: center;
   z-index: 10;
+  border-radius: 50px;
 }
 </style>
