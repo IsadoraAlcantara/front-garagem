@@ -1,6 +1,11 @@
 <script setup>
 import { ref, reactive, onMounted } from 'vue'
 import AcessoriosApi from '@/api/acessorios'
+
+import Button from '../components/ButtonComponent.vue'
+import InputText from '@/components/InputTextComponent.vue';
+import LineDescricao from '@/components/LineDescricaoComponent.vue'
+
 const acessoriosApi = new AcessoriosApi()
 
 const defaultAcessorio = { id: null, descricao: '' }
@@ -41,19 +46,21 @@ async function excluir(id) {
     <h1>Acessório</h1>
     <div class="container">
       <div class="form">
-        <input type="text" v-model="acessorio.descricao" placeholder="Descrição" />
-        <button @click="salvar">Salvar</button>
-        <button @click="limpar">Limpar</button>
+        <InputText v-model="acessorio.descricao" label="Descrição" />
+        <Button @salvar="salvar()" @limpar="limpar()" />
       </div>
-      <ul>
-        <li v-for="acessorio in acessorios" :key="acessorio.id">
-          <span @click="editar(acessorio)">
-            ({{ acessorio.id }}) - {{ acessorio.descricao }} -
-          </span>
-          <button class="bt-delete" @click="excluir(acessorio.id)">X</button>
-        </li>
-      </ul>
+      <LineDescricao :list="acessorios" :editar="editar" :excluir="excluir" />
     </div>
   </div>
 </template>
-<style scoped></style>
+<style scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1vw;
+  background-color: white;
+  width: 30vw;
+  min-height: 30vw;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+</style>

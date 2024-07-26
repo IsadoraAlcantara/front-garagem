@@ -3,6 +3,10 @@ import { ref, reactive, onMounted } from 'vue'
 import MarcasApi from '@/api/marcas'
 const marcasApi = new MarcasApi()
 
+import Button from '../components/ButtonComponent.vue'
+import InputText from '@/components/InputTextComponent.vue';
+import LineNacionalidade from '@/components/LineNacionalidadeComponent.vue'
+
 const defaultMarca = { id: null, nome: '', nacionalidade: '' }
 const marcas = ref([])
 const marca = reactive({ ...defaultMarca })
@@ -41,19 +45,11 @@ async function excluir(id) {
     <h1>Marca</h1>
     <div class="container-select">
       <div class="form">
-        <input type="text" v-model="marca.nome" placeholder="Nome" />
-        <input type="text" v-model="marca.nacionalidade" placeholder="Nacionalidade" />
-        <button @click="salvar">Salvar</button>
-        <button @click="limpar">Limpar</button>
+        <InputText v-model="marca.nome" label="Nome" />
+        <InputText v-model="marca.nacionalidade" label="Nacionalidade" />
+        <Button @salvar="salvar()" @limpar="limpar()" />
       </div>
-      <ul>
-        <li v-for="marca in marcas" :key="marca.id">
-          <span @click="editar(marca)">
-            ({{ marca.id }}) - {{ marca.nome }} - {{ marca.nacionalidade }}
-          </span>
-          <button class="bt-delete" @click="excluir(marca.id)">X</button>
-        </li>
-      </ul>
+      <LineNacionalidade :list="marcas" :editar="editar" :excluir="excluir" />
     </div>
   </div>
 </template>

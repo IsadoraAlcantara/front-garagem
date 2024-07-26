@@ -6,10 +6,8 @@ import ModelosApi from '@/api/modelos'
 import AcessoriosApi from '@/api/acessorios'
 
 import Button from '../components/ButtonComponent.vue'
-// import BtSave from "../components/BtSaveComponent.vue"
-import InputText from '../components/InputTextComponent.vue'
 import InputNumber from '../components/InputNumberComponent.vue'
-import Line from '@/components/LineComponent.vue'
+import LineVeiculos from '@/components/LineVeiculosComponent.vue'
 import Select from '../components/SelectComponent.vue'
 
 const veiculosApi = new VeiculosApi()
@@ -49,7 +47,7 @@ function editar(veiculo_para_editar) {
 }
 
 async function excluir(id) {
-  await veiculosApi.excluirVeiculos(id)
+  await veiculosApi.excluirVeiculo(id)
   veiculos.value = await veiculosApi.buscarTodosOsVeiculos()
   limpar()
 }
@@ -62,33 +60,38 @@ async function excluir(id) {
       <div class="form">
         <InputNumber v-model="veiculo.ano" label="ano" />
         <InputNumber v-model="veiculo.preco" label="preço" />
-        <!-- <select v-model="veiculo.cor" name="cores" id="cores">
-          <option value="" disabled selected>cor</option>
+        <!-- <Select v-model="veiculo.cor" label="cores" :list="cores" /> -->
+        <select v-model="veiculo.cor" name="cores" id="cores">
           <option :value="cor.id" v-for="cor in cores" :key="cor.id">
             {{ cor.nome }}
           </option>
-        </select> -->
-        <Select v-model="veiculo.cor" label="cores" :list="cores" />
-        <!-- <select v-model="veiculo.modelo" name="modelos" id="modelos">
-          <option value="" disabled selected>modelo</option>
+        </select>
+        <!-- <Select v-model="veiculo.modelo" label="modelos" :list="modelos" /> -->
+        <select v-model="veiculo.cor" name="cores" id="cores">
           <option :value="modelo.id" v-for="modelo in modelos" :key="modelo.id">
             {{ modelo.nome }}
           </option>
         </select>
+        <!-- <Select v-model="veiculo.acessorio" label="acessorios" :list="acessorios" /> -->
         <select v-model="veiculo.acessorio" name="acessorios" id="acessorios">
-          <option value="" disabled selected>acessorio</option>
           <option :value="acessorio.id" v-for="acessorio in acessorios" :key="acessorio.id">
             {{ acessorio.descricao }}
           </option>
-        </select> -->
-        <Select v-model="veiculo.modelo" label="modelos" :list="modelos" />
-        <Select v-model="veiculo.acessorio" label="acessorios" :list="acessorios" />
+        </select>
         <Button @salvar="salvar()" @limpar="limpar()" />
       </div>
-      <Line :veiculos="veiculos" />
+      <LineVeiculos :list="veiculos" :editar="editar" :excluir="excluir" />
     </div>
   </div>
 </template>
-
 <style>
+.container-select {
+  display: flex;
+  flex-direction: column;
+  padding: 1vw;
+  background-color: white;
+  min-width: 40vw;
+  min-height: 30vw;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 </style>

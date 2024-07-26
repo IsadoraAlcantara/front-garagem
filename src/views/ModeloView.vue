@@ -5,6 +5,9 @@ import MarcasApi from '@/api/marcas'
 import CategoriasApi from '@/api/categorias'
 
 import Button from '../components/ButtonComponent.vue'
+import InputText from '@/components/InputTextComponent.vue';
+import LineModelos from '@/components/LineModelosComponent.vue';
+// import Select from "../components/SelectComponent.vue"
 
 const modelosApi = new ModelosApi()
 const marcasApi = new MarcasApi()
@@ -52,12 +55,13 @@ async function excluir(id) {
     <h1>Modelo</h1>
     <div class="container-select">
       <div class="form">
-        <input type="text" v-model="modelo.nome" placeholder="Nome" />
+        <InputText v-model="modelo.nome" label="Nome" />
         <select v-model="modelo.marca" name="marcas" id="marcas">
           <option :value="marca.id" v-for="marca in marcas" :key="marca.id">
             {{ marca.nome }}
           </option>
         </select>
+        <!-- <Select v-model="modelo.marca" label="marcas" :list="marcas" /> -->
         <select v-model="modelo.categoria" name="categorias" id="categorias">
           <option :value="categoria.id" v-for="categoria in categorias" :key="categoria.id">
             {{ categoria.descricao }}
@@ -65,14 +69,7 @@ async function excluir(id) {
         </select>
         <Button @salvar="salvar" @limpar="limpar" />
       </div>
-      <ul>
-        <li v-for="modelo in modelos" :key="modelo.id">
-          <span @click="editar(modelo)">
-            ({{ modelo.id }}) - {{ modelo.nome }} - {{ modelo.marca }} - {{ modelo.categoria }}
-          </span>
-          <button class="bt-delete" @click="excluir(modelo.id)">X</button>
-        </li>
-      </ul>
+      <LineModelos :list="modelos" :editar="editar" :excluir="excluir" />
     </div>
   </div>
 </template>

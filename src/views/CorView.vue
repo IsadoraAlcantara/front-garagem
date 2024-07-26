@@ -1,6 +1,11 @@
 <script setup>
 import { ref, reactive, onMounted } from 'vue'
 import CoresApi from '@/api/cores'
+
+import Button from '../components/ButtonComponent.vue'
+import InputText from '@/components/InputTextComponent.vue';
+import LineNome from '@/components/LineNomeComponent.vue'
+
 const coresApi = new CoresApi()
 
 const defaultCor = { id: null, nome: '' }
@@ -41,19 +46,22 @@ async function excluir(id) {
     <h1>Cor</h1>
     <div class="container">
     <div class="form">
-      <input type="text" v-model="cor.nome" placeholder="Nome" />
-      <button @click="salvar">Salvar</button>
-      <button @click="limpar">Limpar</button>
+      <InputText v-model="cor.nome" label="Nome" />
+      <Button @salvar="salvar()" @limpar="limpar()" />
     </div>
-    <ul>
-      <li v-for="cor in cores" :key="cor.id">
-        <span @click="editar(cor)"> ({{ cor.id }}) - {{ cor.nome }} - </span>
-        <button class="bt-delete" @click="excluir(cor.id)">X</button>
-      </li>
-    </ul>
+    <LineNome :list="cores" :editar="editar" :excluir="excluir" />
   </div>
       
     </div>
 </template>
-
-<style></style>
+<style>
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1vw;
+  background-color: white;
+  width: 30vw;
+  min-height: 30vw;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+</style>

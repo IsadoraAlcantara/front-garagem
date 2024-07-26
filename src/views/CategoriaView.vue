@@ -1,6 +1,11 @@
 <script setup>
 import { ref, reactive, onMounted } from 'vue'
 import CategoriasApi from '@/api/categorias'
+
+import Button from '../components/ButtonComponent.vue'
+import InputText from '@/components/InputTextComponent.vue';
+import LineDescricao from '@/components/LineDescricaoComponent.vue'
+
 const categoriasApi = new CategoriasApi()
 
 const defaultCategoria = { id: null, descricao: '' }
@@ -41,20 +46,21 @@ async function excluir(id) {
     <h1>Categoria</h1>
     <div class="container">
       <div class="form">
-        <input type="text" v-model="categoria.descricao" placeholder="Descrição" />
-        <button @click="salvar">Salvar</button>
-        <button @click="limpar">Limpar</button>
+        <InputText v-model="categoria.descricao" label="Descrição" />
+        <Button @salvar="salvar()" @limpar="limpar()" />
       </div>
-      <ul>
-        <li v-for="categoria in categorias" :key="categoria.id">
-          <span @click="editar(categoria)">
-            ({{ categoria.id }}) - {{ categoria.descricao }} -
-          </span>
-          <button class="bt-delete" @click="excluir(categoria.id)">X</button>
-        </li>
-      </ul>
+      <LineDescricao :list="categorias" :editar="editar" :excluir="excluir" />
     </div>
   </div>
 </template>
-
-<style></style>
+<style>
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1vw;
+  background-color: white;
+  width: 30vw;
+  min-height: 30vw;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+</style>
