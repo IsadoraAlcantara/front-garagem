@@ -10,37 +10,48 @@ onBeforeRouteUpdate(() => {
 </script>
 <template>
   <div id="footerMenu" :style="{ display: showMenu ? 'block' : 'none' }">
-    <RouterLink to="/">
-      <i class="mdi mdi-home-outline" />
-      Home
+    <RouterLink to="/acessorios">
+      <i class="mdi mdi-radio" />
+      Acessórios
     </RouterLink>
-    <RouterLink to="/login">
-      <i class="mdi mdi-account" />
-      Login
+    <RouterLink to="/categorias">
+      <i class="mdi mdi-car-sports" />
+      Categorias
+    </RouterLink>
+    <RouterLink to="/cores">
+      <i class="mdi mdi-palette-outline" />
+      Cores
+    </RouterLink>
+    <RouterLink to="/marcas">
+      <i class="mdi mdi-alpha-r-circle-outline" />
+      Marcas
+    </RouterLink>
+    <RouterLink to="/modelos">
+      <i class="mdi mdi-car-convertible" />
+      Modelos
+    </RouterLink>
+    <RouterLink to="/veiculos">
+      <i class="mdi mdi-car" />
+      Veículos
     </RouterLink>
   </div>
   <div class="icons">
     <RouterLink to="/">
-      <i class="mdi mdi-home-outline" />
-      Home
+      <i class="mdi mdi-home-outline mdi-36px" />
     </RouterLink>
     <RouterLink to="/">
-      <i class="mdi mdi-account-circle-outline" />
-      Perfil
+      <i class="mdi mdi-account-circle-outline mdi-36px" />
     </RouterLink>
     <RouterLink to="/veiculos">
       <div class="plus-bt">
-        <i class="mdi mdi-plus size-24" />
+        <i class="mdi mdi-plus mdi-24px" />
       </div>
     </RouterLink>
     <RouterLink to="/">
-      <i class="mdi mdi-cart-outline" />
-      Carrinho
+      <i class="mdi mdi-cart-outline mdi-36px" />
     </RouterLink>
-
     <div class="hamburger" @click="showMenu = !showMenu">
-      <i class="mdi mdi-menu" />
-      Menu
+      <i class="mdi mdi-menu mdi-36px" />
     </div>
   </div>
 </template>
@@ -66,16 +77,17 @@ onBeforeRouteUpdate(() => {
   background-color: white;
   display: block;
   padding: 1rem;
+  border-radius: 8px;
 }
 
 #footerMenu a {
   display: flex;
   width: 100%;
-  justify-content: space-between;
   text-decoration: none;
   color: #282828;
   font-size: 1rem;
   transition: color 0.3s;
+  gap: 2vw;
 }
 
 .icons {

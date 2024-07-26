@@ -48,7 +48,10 @@ onMounted(() => {
       Cores
       <i class="mdi mdi-palette-outline" />
     </div>
-    <div class="box">Marcas</div>
+    <div class="box">
+      Marcas
+      <i class="mdi mdi-alpha-r-circle-outline" />
+    </div>
     <div class="box">
       Modelos
       <i class="mdi mdi-car-convertible" />

@@ -4,7 +4,7 @@ import MarcasApi from '@/api/marcas'
 const marcasApi = new MarcasApi()
 
 import Button from '../components/ButtonComponent.vue'
-import InputText from '@/components/InputTextComponent.vue';
+import InputText from '@/components/InputTextComponent.vue'
 import LineNacionalidade from '@/components/LineComponents/LineNacionalidadeComponent.vue'
 
 const defaultMarca = { id: null, nome: '', nacionalidade: '' }
@@ -53,5 +53,26 @@ async function excluir(id) {
     </div>
   </div>
 </template>
+<style scoped>
+@media screen and (max-width: 768px) {
+  .container-select {
+    min-height: 70vw;
+    min-width: 85vw;
+  }
 
-<style></style>
+  ul {
+    margin-top: 6vw;
+  }
+
+  select {
+    width: 14vw !important;
+    height: 6vw !important;
+    background-color: white;
+  }
+
+  .form {
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+  }
+}
+</style>

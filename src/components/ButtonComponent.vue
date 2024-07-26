@@ -16,10 +16,10 @@ button {
 @media screen and (max-width: 768px) {
   button {
     padding: 1.7vw;
+    width: 20vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2vw 0;
   }
 }
 </style>

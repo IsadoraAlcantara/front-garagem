@@ -78,7 +78,7 @@ async function excluir(id) {
             {{ acessorio.descricao }}
           </option>
         </select>
-        <Button @salvar="salvar()" @limpar="limpar()" />
+        <Button class="button" @salvar="salvar()" @limpar="limpar()" />
       </div>
       <LineVeiculos :list="veiculos" :editar="editar" :excluir="excluir" />
     </div>

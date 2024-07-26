@@ -63,4 +63,20 @@ async function excluir(id) {
   min-height: 30vw;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    min-height: 70vw;
+    min-width: 85vw;
+  }
+
+  ul {
+    margin-top: 6vw;
+  }
+
+  .form {
+    display: grid;
+    grid-template-columns: 40vw 20vw 14vw;
+  }
+}
 </style>

@@ -13,6 +13,13 @@ input {
   border-radius: 5px;
   border: solid #797e8c 1px;
   outline: none;
-  width: 15vw;
+  width: 100% !important;
+}
+
+@media screen and (max-width: 768px) {
+  input {
+    height: 6vw;
+    width: 100%;
+  }
 }
 </style>
