@@ -27,4 +27,10 @@ li {
   justify-content: space-between;
   padding: 0 2vw;
 }
+
+@media screen and (max-width: 768px) {
+  li {
+    padding: 1vw;
+  }
+}
 </style>

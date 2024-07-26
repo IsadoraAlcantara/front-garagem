@@ -6,7 +6,7 @@ import CategoriasApi from '@/api/categorias'
 
 import Button from '../components/ButtonComponent.vue'
 import InputText from '@/components/InputTextComponent.vue';
-import LineModelos from '@/components/LineModelosComponent.vue';
+import LineModelos from '@/components/LineComponents/LineModelosComponent.vue';
 // import Select from "../components/SelectComponent.vue"
 
 const modelosApi = new ModelosApi()

@@ -1,6 +1,5 @@
 <script setup>
 import LargeHeader from '@/components/templates/large/LargeHeader.vue'
-import LargeMain from '../components/templates/large/LargeMain.vue'
 </script>
 <template>
   <div id="layout-large">
@@ -8,7 +7,6 @@ import LargeMain from '../components/templates/large/LargeMain.vue'
       <LargeHeader />
     </header>
     <main>
-      <LargeMain />
       <router-view />
     </main>
   </div>

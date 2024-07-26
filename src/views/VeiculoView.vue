@@ -7,7 +7,7 @@ import AcessoriosApi from '@/api/acessorios'
 
 import Button from '../components/ButtonComponent.vue'
 import InputNumber from '../components/InputNumberComponent.vue'
-import LineVeiculos from '@/components/LineVeiculosComponent.vue'
+import LineVeiculos from '@/components/LineComponents/LineVeiculosComponent.vue'
 import Select from '../components/SelectComponent.vue'
 
 const veiculosApi = new VeiculosApi()
@@ -67,7 +67,7 @@ async function excluir(id) {
           </option>
         </select>
         <!-- <Select v-model="veiculo.modelo" label="modelos" :list="modelos" /> -->
-        <select v-model="veiculo.cor" name="cores" id="cores">
+        <select v-model="veiculo.modelo" name="modelos" id="modelos">
           <option :value="modelo.id" v-for="modelo in modelos" :key="modelo.id">
             {{ modelo.nome }}
           </option>
@@ -93,5 +93,32 @@ async function excluir(id) {
   min-width: 40vw;
   min-height: 30vw;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form select {
+  height: 2.6vw;
+  width: 5vw;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .container-select {
+    min-height: 60vw;
+  }
+
+  ul {
+    margin-top: 12vw;
+  }
+
+  select {
+    width: 10vw !important;
+    height: 6vw !important;
+    background-color: white;
+  }
+
+  .form {
+    display: grid;
+    grid-template-columns: 15vw 15vw 10vw 10vw 10vw;
+  }
 }
 </style>

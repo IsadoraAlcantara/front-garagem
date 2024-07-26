@@ -15,4 +15,10 @@ input {
   outline: none;
   width: 15vw;
 }
+
+@media screen and (max-width: 768px) {
+  input {
+    height: 6vw;
+  }
+}
 </style>

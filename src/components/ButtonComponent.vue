@@ -12,4 +12,14 @@ button {
   padding: 0.6vw;
   border-radius: 5px;
 }
+
+@media screen and (max-width: 768px) {
+  button {
+    padding: 1.7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2vw 0;
+  }
+}
 </style>

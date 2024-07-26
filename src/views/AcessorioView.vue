@@ -4,7 +4,7 @@ import AcessoriosApi from '@/api/acessorios'
 
 import Button from '../components/ButtonComponent.vue'
 import InputText from '@/components/InputTextComponent.vue';
-import LineDescricao from '@/components/LineDescricaoComponent.vue'
+import LineDescricao from '@/components/LineComponents/LineDescricaoComponent.vue'
 
 const acessoriosApi = new AcessoriosApi()
 

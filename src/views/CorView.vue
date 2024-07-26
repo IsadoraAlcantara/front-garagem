@@ -4,7 +4,7 @@ import CoresApi from '@/api/cores'
 
 import Button from '../components/ButtonComponent.vue'
 import InputText from '@/components/InputTextComponent.vue';
-import LineNome from '@/components/LineNomeComponent.vue'
+import LineNome from '@/components/LineComponents/LineNomeComponent.vue'
 
 const coresApi = new CoresApi()
 

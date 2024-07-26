@@ -5,7 +5,7 @@ const marcasApi = new MarcasApi()
 
 import Button from '../components/ButtonComponent.vue'
 import InputText from '@/components/InputTextComponent.vue';
-import LineNacionalidade from '@/components/LineNacionalidadeComponent.vue'
+import LineNacionalidade from '@/components/LineComponents/LineNacionalidadeComponent.vue'
 
 const defaultMarca = { id: null, nome: '', nacionalidade: '' }
 const marcas = ref([])
