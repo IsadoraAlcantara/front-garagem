@@ -6,10 +6,11 @@
       <p class="title">Seja bem-vindo!</p>
       <p>Qual é o automóvel dos seus sonhos?</p>
     </div>
+    <img src="https://i.ibb.co/qk8Xb3x/oficina-invertida.jpg" alt="">
   </div>
   <div class="search">
     <i class="mdi mdi-magnify mdi-24px" />
-    <input type="text" placeholder="Pesquisar">
+    <input type="text" placeholder="Pesquisar" />
   </div>
   <p class="title-2">Coisas de carro</p>
   <div class="links">
@@ -41,39 +42,41 @@
 </template>
 <style scoped>
 .search {
-    background-color: #d0d4da;
-    width: 85vw;
-    height: 8vw;
-    border-radius: 20px;
-    display: flex;
-    margin-top: 5vw;
-    padding: 0 2vw;
+  background-color: #d0d4da;
+  width: 85vw;
+  height: 9vw;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 5vw;
+  padding: 0 2vw;
 }
 
 .search i {
-    color: grey;
+  color: grey;
 }
 
 .search input {
-    background-color: transparent;
-    border: none;
-    color: #0c2240;
-    font-size: 16px;
-    margin: 2vw;
-    outline: none
+  background-color: transparent;
+  border: none;
+  color: #0c2240;
+  font-size: 16px;
+  margin: 2vw;
+  outline: none;
 }
 
 .title-2 {
-    align-self: flex-start;
-    margin: 2vw 0;
-    font-size: 16px;
-    color: #0c2240;
+  align-self: flex-start;
+  margin: 2vw 0;
+  font-size: 18px;
+  color: #0c2240;
+  font-weight: 600;
 }
 
 h2 {
-    align-self: flex-start;
-    font-weight: bold;
-    font-size: 28px;
+  align-self: flex-start;
+  font-weight: bold;
+  font-size: 28px;
 }
 
 i {
@@ -85,11 +88,17 @@ i {
 }
 
 .welcome {
+  position: relative;
   width: 85vw;
   height: 30vw;
   border: #0c2240 solid 3px;
   border-radius: 20px;
   padding: 5vw;
+  display: flex;
+}
+
+.welcome img {
+  width: 200px;
 }
 
 .text {
@@ -115,7 +124,7 @@ h2 {
 
 .box {
   background-color: #a7bdd9;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   color: #0c2240;
   margin: 2vw;
   height: 30vw;

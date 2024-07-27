@@ -37,10 +37,10 @@ onBeforeRouteUpdate(() => {
   </div>
   <div class="icons">
     <RouterLink to="/">
-      <i class="mdi mdi-home-outline mdi-36px" />
+      <i class="mdi mdi-home-outline mdi-24px" />
     </RouterLink>
     <RouterLink to="/login">
-      <i class="mdi mdi-account-circle-outline mdi-36px" />
+      <i class="mdi mdi-account-circle-outline mdi-24px" />
     </RouterLink>
     <RouterLink to="/veiculos">
       <div class="plus-bt">
@@ -48,10 +48,10 @@ onBeforeRouteUpdate(() => {
       </div>
     </RouterLink>
     <RouterLink to="/">
-      <i class="mdi mdi-cart-outline mdi-36px" />
+      <i class="mdi mdi-cart-outline mdi-24px" />
     </RouterLink>
     <div class="hamburger" @click="showMenu = !showMenu">
-      <i class="mdi mdi-menu mdi-36px" />
+      <i class="mdi mdi-menu mdi-24px" />
     </div>
   </div>
 </template>
@@ -71,8 +71,8 @@ onBeforeRouteUpdate(() => {
   position: fixed;
   bottom: 100%;
   right: 0;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  width: 35%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 36%;
   border-top: #eeeeee 1px solid;
   background-color: #0c2240;
   display: block;
@@ -96,6 +96,7 @@ onBeforeRouteUpdate(() => {
   height: 8vw;
   align-items: center;
   justify-content: space-between;
+  padding: 3vw;
 }
 
 .icons a,

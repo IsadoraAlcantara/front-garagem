@@ -11,6 +11,7 @@ button {
   border: none;
   padding: 0.6vw;
   border-radius: 5px;
+  height: 6vw;
 }
 
 @media screen and (max-width: 768px) {
